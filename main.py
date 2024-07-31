@@ -1,13 +1,10 @@
 import pytest
 
 
-def test_add2():
-    assert 1 + 1 == 2
-
-
-def test_subtract():
-    assert 3 - 2 == 1
-
-
-def check(number):
-    return number % 2 == 0
+def count_vowels(text: str) -> int:
+    vowels = 'аеёиоуыэюяАЕЁИОУЫЭЮЯ'
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
